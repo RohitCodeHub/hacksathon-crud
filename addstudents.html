@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>hackathon</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/form.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<span class="bckg"></span>
+<header class="header2">
+  <h1>Dashboard</h1>
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html" data-title="Projects">Add Classes</a>
+      </li>
+      <li>
+        <a href="addstudents.html" data-title="Team">Add students</a>
+      </li>
+      <li>
+        <a href="search.html" data-title="Search">Search</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="title">
+    <h2>Students</h2>
+    <a href="javascript:void(0);">Hello Admin !</a>
+  </div>
+
+  <div class="container">
+    <header class="header1">
+      <h3>List Students</h3>
+    </header>
+
+    <div class="table-wrapper">
+      <table class="table-users">
+        <tr>
+          <th>Name</th>
+          <th>Father Name</th>
+          <th>Roll Number</th>
+          <th>Contact Number</th>
+          <th>CNIC No</th>
+          <th>Course Names</th>
+          <th>Action</th>
+        </tr>
+      </table>
+      <button class="btn btn-add">Add Students</button>
+    </div>
+    <!-- Add Modal -->
+    <div class="add-modal modal-wrapper">
+      <div class="modal">
+        <div class="modal-header"><h3>Add New Students</h3></div>
+        <div class="modal-body">
+          <form class="form" autocomplete="off">
+            <input type="text" name="Name" placeholder="Student Name">
+            <input type="text" name="fatherName" placeholder="Father Name">
+            <input type="number" name="rollNo" placeholder="Roll Number">
+            <input type="number" name="contactNo" placeholder="Contact Number">
+            <input type="number" name="cnicNo" placeholder="CNIC Number">
+            <select name="courseName">
+              <option value="Web" selected>Web</option>
+              <option value="Mobile">Mobile</option>
+              <option value="Metaverse">Metaverse</option>
+            </select>
+            <button class="btn btn-modal">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="edit-modal modal-wrapper">
+      <div class="modal">
+        <div class="modal-header"><h3>Edit Class</h3></div>
+        <div class="modal-body">
+          <form class="form" autocomplete="off">
+            <input type="text" name="Name" placeholder="Student Name">
+            <input type="text" name="fatherName" placeholder="Father Name">
+            <input type="number" name="rollNo" placeholder="Roll Number">
+            <input type="number" name="contactNo" placeholder="Contact Number">
+            <input type="number" name="cnicNo" placeholder="CNIC Number">
+            <select name="courseName">
+              <option value="Web">Web</option>
+              <option value="Mobile">Mobile</option>
+              <option value="Metaverse">Metaverse</option>
+            </select>
+            <button class="btn btn-modal">Update</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBVI3kGR78HSxd_mALRrTikfV0O1HOZ8S0",
+  authDomain: "hackathon-eb183.firebaseapp.com",
+  projectId: "hackathon-eb183",
+  storageBucket: "hackathon-eb183.appspot.com",
+  messagingSenderId: "170631724562",
+  appId: "1:170631724562:web:adbd59a90859b13a5162cb"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+  <script src="./script.js"></script>
+
+</main>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'>
+  </script><script  src="./assets/js/students.js"></script>
+
+</body>
+</html>
